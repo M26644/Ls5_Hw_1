@@ -1,9 +1,6 @@
 package com.example.ls5_hw_1;
 
-import static android.content.ContentValues.TAG;
-
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,12 +14,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class BookAdapter extends RecyclerView.Adapter<BookAdapter.MyViewHolder>  {
-    private ArrayList<Book> bookArrayList;
+    private ArrayList<BookDTO> bookDTOArrayList;
     private Context context;
 
 
-    public  BookAdapter(ArrayList<Book> bookArrayList, Context context) {
-        this.bookArrayList = bookArrayList;
+    public  BookAdapter(ArrayList<BookDTO> bookDTOArrayList, Context context) {
+        this.bookDTOArrayList = bookDTOArrayList;
         this.context = context;
     }
 
@@ -51,10 +48,10 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.MyViewHolder> 
         // ma vi tri cua item = doi tuong sinh vien nam trong arraylist Sinh vien
 
 
-        Book book = bookArrayList.get(position);
+        BookDTO bookDTO = bookDTOArrayList.get(position);
 
         // gan du lieu vao item
-        holder.txtHeader.setText(book.getBookName());
+        holder.txtHeader.setText(bookDTO.getBookName());
     }
 
 
@@ -62,7 +59,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.MyViewHolder> 
     @Override
     public int getItemCount() {
 
-        return bookArrayList.size();
+        return bookDTOArrayList.size();
     }
 
 

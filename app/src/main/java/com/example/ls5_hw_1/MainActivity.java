@@ -38,18 +38,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-        ArrayList<com.example.ls5_hw_1.Book> bookArrayList = new ArrayList<>();
-        bookArrayList.add(new com.example.ls5_hw_1.Book("To kill a mocking bird"));
-        bookArrayList.add(new com.example.ls5_hw_1.Book("To kill a mocking bird"));
-        bookArrayList.add(new com.example.ls5_hw_1.Book("To kill a mocking bird"));
-        bookArrayList.add(new com.example.ls5_hw_1.Book("To kill a mocking bird"));
-        bookArrayList.add(new com.example.ls5_hw_1.Book("To kill a mocking bird"));
-        bookArrayList.add(new com.example.ls5_hw_1.Book("To kill a mocking bird"));
-        bookArrayList.add(new com.example.ls5_hw_1.Book("To kill a mocking bird"));
+        ArrayList<BookDTO> bookDTOArrayList = new ArrayList<>();
+        bookDTOArrayList.add(new BookDTO("To kill a mocking bird"));
+        bookDTOArrayList.add(new BookDTO("To kill a mocking bird"));
+        bookDTOArrayList.add(new BookDTO("To kill a mocking bird"));
+        bookDTOArrayList.add(new BookDTO("To kill a mocking bird"));
+        bookDTOArrayList.add(new BookDTO("To kill a mocking bird"));
+        bookDTOArrayList.add(new BookDTO("To kill a mocking bird"));
+        bookDTOArrayList.add(new BookDTO("To kill a mocking bird"));
 
 
 
-        com.example.ls5_hw_1.BookAdapter adapter = new com.example.ls5_hw_1.BookAdapter(bookArrayList, this);
+        com.example.ls5_hw_1.BookAdapter adapter = new com.example.ls5_hw_1.BookAdapter(bookDTOArrayList, this);
         recyclerView.setAdapter(adapter);
 
 

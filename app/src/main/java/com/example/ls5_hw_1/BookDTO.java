@@ -1,14 +1,14 @@
 package com.example.ls5_hw_1;
 
-public class Book {
+public class BookDTO {
 
 
     private String BookName;
 
-    public Book(String bookName) {
+    public BookDTO(String bookName) {
         this.BookName = bookName;
     }
-    public Book() {
+    public BookDTO() {
 
     }
 
